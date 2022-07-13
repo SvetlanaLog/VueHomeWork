@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
+  <div class="nav-bar"></div>
   <div id="app">
   
     <div class="product">
@@ -21,6 +22,8 @@
         <p v-if="inventory > 10">In Stock</p>
         <p v-else-if="inventory <= 10 &&inventory > 0">Almos sold out!</p>
         <p v-else>Out of Stock</p>
+        <span v-if="onSale">On Sale</span>
+    </div>
     </div>
   </div>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.13/dist/vue.js"></script>
