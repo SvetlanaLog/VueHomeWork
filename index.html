@@ -32,7 +32,7 @@
              v-for="(variant, index) in variants" 
              :key="variant.variantId"
              :style="{ backgroundColor:variant.variantColor }"
-             @mouseover="updateProduct(variant.variantImage)"
+             @mouseover="updateProduct(index)"
              >
         </div> 
 
