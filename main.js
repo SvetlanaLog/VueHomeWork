@@ -20,14 +20,14 @@ var app = new Vue({
       }
     ],
     cart: 0,
-    onSale: true
   },
   methods: {
-    addToCart: function() {
+    addToCart() {
       this.cart += 1
     },
-    updateProduct: function(index) {
+    updateProduct(index) {
       this.selectedVariant = index;
+      console.log(index);
     }
   },
   computed: {
@@ -39,14 +39,8 @@ var app = new Vue({
     },
     inStock(){
       return this.variants[this.selectedVariant].variantQuantity
-    },
-    sale() {
-      if (this.onSale) {
-        return this.brand + ' ' + this.product + ' are on sale'
-      }
-      return this.brand + ' ' +  this.product + ' are not  on sale'
-          }
-      },
+    }
+        },
   
 })
 
