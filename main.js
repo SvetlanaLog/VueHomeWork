@@ -1,3 +1,17 @@
+Vue.component ('product-detalis',  {
+  props: {
+    detalis: {
+        type: Array,
+        required: true
+    }
+  },
+  template: `
+      <ul>
+        <li v-for="detail in details">{{ detail }}</li>
+      </ul>
+  ` 
+ })
+ 
 Vue.component('product', {
   props: {
     premium: {
